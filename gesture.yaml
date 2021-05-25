@@ -1,0 +1,40 @@
+esphome:
+  name: gesture
+  platform: ESP32
+  board: nodemcu-32s
+
+<<: !include base.yaml
+
+captive_portal:
+
+# Example configuration entry
+i2c:
+  sda: 21
+  scl: 22
+  scan: True
+
+
+# Example configuration entry
+sensor:
+  - platform: htu21d
+    temperature:
+      name: "Gesture Temperature"
+    humidity:
+      name: "Gesture Humidity"
+    update_interval: 60s
+
+# Example configuration entry
+# apds9960:
+#   address: 0x39
+#   update_interval: 1s
+
+# sensor:
+#   - platform: apds9960
+#     type: CLEAR
+#     name: "APDS9960 Clear Channel"
+
+# binary_sensor:
+#   - platform: apds9960
+#     direction: UP
+#     name: "APDS960 Up Movement"
+#   # Repeat for each direction

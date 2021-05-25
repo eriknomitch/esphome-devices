@@ -1,0 +1,21 @@
+esphome:
+  name: proximity
+  platform: ESP32
+  board: lolin32
+
+<<: !include base.yaml
+
+captive_portal:
+
+# Example configuration entry
+status_led:
+  pin: GPIO2
+
+# Example configuration entry
+sensor:
+  - platform: ultrasonic
+    trigger_pin: 25
+    echo_pin: 26
+    name: "Ultrasonic Sensor"
+    update_interval: 5ms
+    timeout: 1.3m # NOTE: Default is 2

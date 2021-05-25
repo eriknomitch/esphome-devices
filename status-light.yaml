@@ -1,0 +1,15 @@
+esphome:
+  name: status-light
+  platform: ESP32
+  board: wemos_d1_mini32
+
+<<: !include base.yaml
+
+# Example configuration entry
+light:
+  - platform: fastled_clockless
+    chipset: WS2812
+    pin: GPIO23
+    num_leds: 16
+    rgb_order: GRB
+    name: "Status Light RGB Ring"

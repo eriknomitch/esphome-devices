@@ -1,0 +1,18 @@
+{
+  "default": {
+    "extensions": [".yaml"],
+    "exclusions": [".esphome/"],
+    "files": ["README.md"],
+    "first_file": "README.md"
+  },
+  "docs": {
+    "extensions": [".md"],
+    "first_file": "README.md"
+  },
+  "diff": {
+    "command": "git diff --name-only"
+  },
+  "git": {
+    "files": [".git/config", ".gitignore"]
+  }
+}
