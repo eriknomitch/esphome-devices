@@ -1,0 +1,3 @@
+#!/bin/zsh
+
+docker run --rm -v /Users/erik/.repositories/esphome-devices:/config -it esphome/esphome $@
