@@ -1,7 +1,8 @@
 esphome:
   name: status-light
   platform: ESP32
-  board: wemos_d1_mini32
+  # board: wemos_d1_mini32
+  board: lolin32
 
 <<: !include base.yaml
 
