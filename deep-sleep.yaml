@@ -1,0 +1,16 @@
+status_led:
+  pin:
+    number: D4
+    inverted: True
+
+esphome:
+  name: deep-sleep
+  platform: ESP32
+  board: wemos_d1_mini32
+
+<<: !include base.yaml
+
+# Example configuration entry
+# deep_sleep:
+#   run_duration: 10s
+#   sleep_duration: 1min
