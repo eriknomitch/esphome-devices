@@ -6,7 +6,8 @@ wifi:
 logger:
 
 # Enable Home Assistant API
-api:
+# NOTE: You cannot have api and mqtt
+# api:
 
 ota:
 
