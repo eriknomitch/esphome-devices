@@ -12,7 +12,6 @@ esphome:
 
 <<: !include base.yaml
 
-# Example configuration entry
 light:
   - platform: fastled_clockless
     chipset: WS2812
@@ -20,3 +19,13 @@ light:
     num_leds: 16
     rgb_order: GRB
     name: "Status Light RGB Ring"
+
+switch:
+  - platform: gpio
+    pin: 25
+    id: button0
+    name: "Status Button 0"
+    icon: "mdi:gate"
+    on_turn_on:
+      - delay: 250ms
+      - switch.turn_off: button0
