@@ -20,12 +20,17 @@ light:
     rgb_order: GRB
     name: "Status Light RGB Ring"
 
-switch:
+binary_sensor:
   - platform: gpio
     pin: 25
-    id: button0
     name: "Status Button 0"
-    icon: "mdi:gate"
-    on_turn_on:
-      - delay: 250ms
-      - switch.turn_off: button0
+    icon: "mdi:gesture-tap-button"
+# switch:
+#   - platform: gpio
+#     pin: 25
+#     id: button0
+#     name: "Status Button 0"
+#     icon: "mdi:gate"
+#     on_turn_on:
+#       - delay: 250ms
+#       - switch.turn_off: button0
