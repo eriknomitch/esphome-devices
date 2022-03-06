@@ -18,13 +18,24 @@ light:
     pin: GPIO23
     num_leds: 16
     rgb_order: GRB
-    name: "Status Light RGB Ring"
+    name: "Status Light RGB Ring 0"
+  - platform: fastled_clockless
+    chipset: WS2812
+    pin: GPIO21
+    num_leds: 16
+    rgb_order: GRB
+    name: "Status Light RGB Ring 1"
 
 binary_sensor:
   - platform: gpio
     pin: 25
     name: "Status Button 0"
     icon: "mdi:gesture-tap-button"
+  - platform: gpio
+    pin: 26
+    name: "Status Button 1"
+    icon: "mdi:gesture-tap-button"
+
 # switch:
 #   - platform: gpio
 #     pin: 25
