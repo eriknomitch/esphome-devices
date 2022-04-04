@@ -1,5 +1,5 @@
 esphome:
-  name: notifier-button-living-room
+  name: notifier-button-bedroom
   platform: ESP8266
   board: esp12e
 
@@ -8,5 +8,5 @@ esphome:
 binary_sensor:
   - platform: gpio
     pin: GPIO15
-    name: "Notifier Button Living Room"
+    name: "Notifier Button Bedroom"
     icon: "mdi:gesture-tap-button"
